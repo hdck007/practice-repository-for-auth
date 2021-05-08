@@ -1,0 +1,25 @@
+{
+  "name": "auth-example",
+  "version": "1.0.0",
+  "description": "This is the repository where I push all my code that helped me understand how auth works.\r ### Tech Stack\r 1. NodeJS\r 2. Express JS\r 3. VSCode Rest Client Extension to test things (other alternative is Postman)",
+  "main": "server.js",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hdck007/practice-repository-for-auth.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hdck007/practice-repository-for-auth/issues"
+  },
+  "homepage": "https://github.com/hdck007/practice-repository-for-auth#readme"
+}

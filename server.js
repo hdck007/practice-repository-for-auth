@@ -35,7 +35,7 @@ app.post('/signup', async (req, res) => {
 		let name = req.body.name;
 		let hashedPassword = req.body.password;
 		// The below function creates a hash associated with a salt
-		let password = await bcrypt.hashSync(hashedPassword, 10);
+		let password = await bcrypt.hash(hashedPassword, 10);
 		let user = {
 			name,
 			password,
@@ -52,7 +52,7 @@ app.post('/login', async (req, res) => {
 	try {
 		let user = users.find((user) => user.name === req.body.name);
 		if (user) {
-			if (await bcrypt.compareSync(req.body.password, user.password)) {
+			if (await bcrypt.compare(req.body.password, user.password)) {
 				res.status(200).send(`User ${user.name} logged in`);
 			} else {
 				res.status(400).send('Wrong Password');
